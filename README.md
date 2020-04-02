@@ -1,5 +1,6 @@
 # proyecto-python-josefa-varela-c
-proyecto final pyhton
+Proyecto final pyhton
+
 Nombre integrante: 
 * Josefa Varela  - josefa.varela1401@alumnos.ubiobio.cl
 
