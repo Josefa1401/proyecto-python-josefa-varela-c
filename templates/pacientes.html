@@ -16,23 +16,26 @@
 <body>
 
 <div class="container">
-  <h2>Listado de Vacunas<a href="http://127.0.0.1:5000/agregar_vacunas" class="btn btn-success" role="button">Nueva</a></h2>
+  <h2>Pacientes  <a href="http://127.0.0.1:5000/agregar_paciente" class="btn btn-success" role="button">Nuevo</a><a href="http://127.0.0.1:5000/vacunas" class="btn btn-info" role="button">Vacunas</a></h2>
 	<br>
   <table class="table table-hover" id="myTable">
     <thead>
       <tr>
         <th>Nombre</th>
-        <th>Fecha Registro</th>
-        <th>Pacientes</th>
+        <th>RUN</th>
+        <th>Fecha Nacimiento</th>
+        <th>Vacunas</th>
       </tr>
     </thead>
     <tbody>
-      {% for vacuna in vacuna %}
+      {% for paciente in paciente %}
         <tr>
-          <td>{{ vacuna['nombre_enfermedad'] }}</td>
-          <td>{{ vacuna['fecha_registro'] }}</td>
+          <td>{{ paciente['nombre'] }}</td>
+          <td>{{ paciente['rut'] }}</td>
+          <td>{{ paciente['fecha_nacimiento'] }}</td>
           <td>
-            <a href="http://127.0.0.1:5000/vacunas_ver?nombre={{vacuna['nombre_enfermedad']}}">Ver</a>
+          	<a href="http://127.0.0.1:5000/pacientes_agregar?rut={{paciente['rut']}}">Agregar</a>
+            <a href="http://127.0.0.1:5000/pacientes_ver?rut={{paciente['rut']}}">Ver</a>
           </td>
           
         </tr>
